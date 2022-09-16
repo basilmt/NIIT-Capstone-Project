@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
+    
+    <title>Pneumonia Detection</title>
+
+    <style>
+        body {
+            background-color: rgb(174, 189, 202);
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <br>
+    <br>
+    <br>
+    <h1>Pneumonia Detection</h1>
+    {% for message in get_flashed_messages() %}
+    <div >
+       {{ message }}<br>
+
+     </div>
+   {% endfor %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+    <form class="form-group" action="/" method="POST" enctype=multipart/form-data>
+            <input type="file" name="file" id="file">
+        <br>
+        <input type="submit" value="upload">
+    </form>
+</body>
+</html>
